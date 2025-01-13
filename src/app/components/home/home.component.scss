@@ -1,13 +1,32 @@
 .pagina-publica-container {
     font-family: Arial, sans-serif;
     margin: 20px;
+    margin-top: 50px;
     padding: 20px;
     border: 2px solid #ccc;
     border-radius: 10px;
     background-color: #f9f9f9;
 }
 
-h1 {
+.pagina-publica-container h1 {
+    font-size: 3rem;  /* Tamaño de fuente grande */
+    font-weight: bold;  /* Negrita */
     color: #333;
     text-align: center;
+}
+
+.pagina-publica-container span {
+    display: block;  /* Asegura que cada palabra esté en una línea separada */
+    font-size: 2.5rem;  /* Tamaño de fuente ligeramente más pequeño si lo prefieres */
+}
+
+.imagen-container {
+    text-align: center; /* Centra el contenido horizontalmente */
+    margin-top: 20px;  /* Espacio entre el texto y la imagen */
+}
+
+.imagen-container img {
+    max-width: 100%; /* La imagen no excederá el ancho del contenedor */
+    height: auto;    /* Mantiene la proporción de la imagen */
+    display: inline-block; /* Centra la imagen cuando está dentro del texto */
 }

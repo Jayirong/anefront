@@ -36,7 +36,9 @@ export class AppComponent {
   }
 
   cerrarSesion(): void {
-    this.msalService.logout();
+    this.msalService.logoutPopup({
+      mainWindowRedirectUri: "/"
+    });
   }
 
 }
