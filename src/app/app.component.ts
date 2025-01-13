@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { MsalService } from '@azure/msal-angular'
 import { AuthenticationResult } from '@azure/msal-browser'
 
@@ -14,7 +14,7 @@ import { AuthenticationResult } from '@azure/msal-browser'
 export class AppComponent {
   title = 'anefront';
 
-  constructor(private msalService: MsalService) {}
+  constructor(private msalService: MsalService, private router: Router) {}
 
   usuarioEstaConectado(): boolean {
     return this.msalService.instance.getActiveAccount() != null;
@@ -27,6 +27,9 @@ export class AppComponent {
       this.msalService.acquireTokenSilent({ scopes: [] }).subscribe({
         next: (tokenResponse) => {
           localStorage.setItem('jwt', tokenResponse.idToken);
+
+          //redirigimos al menu luego del login
+          this.router.navigate(['/menu']);
         },
       });
     });
