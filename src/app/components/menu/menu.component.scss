@@ -48,3 +48,25 @@ button:hover {
     background-color: #f3f3f3;
     border-radius: 5px;
 }
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.big-button {
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 1.5em;
+    margin: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.big-button:hover {
+    background-color: #0056b3;
+}

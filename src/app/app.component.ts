@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, Location } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { MsalService } from '@azure/msal-angular'
@@ -14,7 +14,7 @@ import { AuthenticationResult } from '@azure/msal-browser'
 export class AppComponent {
   title = 'anefront';
 
-  constructor(private msalService: MsalService, private router: Router) {}
+  constructor(private msalService: MsalService, private router: Router, private location: Location) {}
 
   usuarioEstaConectado(): boolean {
     return this.msalService.instance.getActiveAccount() != null;
@@ -39,6 +39,10 @@ export class AppComponent {
     this.msalService.logoutPopup({
       mainWindowRedirectUri: "/"
     });
+  }
+
+  volverAtras(): void {
+    this.location.back();
   }
 
 }

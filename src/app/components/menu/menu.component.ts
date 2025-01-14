@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { MsalService } from '@azure/msal-angular';
 import { DefaultBackendService } from '../../services/default-backend.service';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss'
 })
@@ -27,14 +28,5 @@ export class MenuComponent {
     return account.name;
   }
 
-  llamarBackend(): void {
-    this.backendService.consumirBackend().subscribe(response => {
-      this.responseBackend = response;
-    });
-  }
-
-  mostrarResponseBackend(): string {
-    return JSON.stringify(this.responseBackend);
-  }
 
 }

@@ -12,7 +12,7 @@ export class DefaultBackendService {
     headers: new HttpHeaders({})
   };
 
-  public consumirBackend() {
+  public getAllPacientes() {
     return this.http.get('https://8r48b6gujh.execute-api.us-east-1.amazonaws.com/pacientes', this.httpOptions);
   }
 

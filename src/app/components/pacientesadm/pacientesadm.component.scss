@@ -1,0 +1,38 @@
+.pacientes-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+}
+
+.titulo {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.botones-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 20px;
+    justify-content: center;
+}
+
+.boton-placeholder {
+    width: 350px;
+    height: 150px;
+    font-size: 1.2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.boton-placeholder:hover {
+    background-color: #0056b3;
+}

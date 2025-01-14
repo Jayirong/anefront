@@ -31,6 +31,10 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    margin: 0;
+}
+
 button {
     padding: 8px 16px;
     font-size: 14px;
@@ -47,4 +51,33 @@ button:hover {
 
 .contenido {
     margin: 20px;
+}
+
+.estado {
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin: 10px;
+    background-color: #f9f9f9;
+}
+
+.estado-contenido {
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+}
+
+.back-button {
+    // position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.5rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+.back-button:hover {
+    color: #0056b3;
 }
