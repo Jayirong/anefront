@@ -10,7 +10,11 @@
                 [(ngModel)]="paciente.nombre_paciente"
                 name="nombre_paciente"
                 required
+                #nombre="ngModel"
             />
+            <div *ngIf="nombre.invalid && nombre.touched" class="error-message">
+                El nombre es requerido >:(
+            </div>
         </div>
     
         <div class="form-group">
@@ -22,7 +26,11 @@
                 [(ngModel)]="paciente.apellido_paciente"
                 name="apellido_paciente"
                 required
+                #apellido="ngModel"
             />
+            <div *ngIf="apellido.invalid && apellido.touched" class="error-message">
+                El apellido es requerido >:(
+            </div>
         </div>
     
         <div class="form-group">
@@ -34,7 +42,12 @@
                 [(ngModel)]="paciente.rut_paciente"
                 name="rut_paciente"
                 required
+                #rut="ngModel"
+                pattern="\d{1,2}(\.\d{3}){2}-[\dkK]"
             />
+            <div *ngIf="rut.invalid && rut.touched" class="error-message">
+                El RUT debe ser válido (Ej: 20.523.367-9)
+            </div>
         </div>
     
         <div class="form-group">
@@ -46,7 +59,12 @@
                 [(ngModel)]="paciente.telefono_paciente"
                 name="telefono_paciente"
                 required
+                #telefono="ngModel"
+                pattern="^\d{9}$"
             />
+            <div *ngIf="telefono.invalid && telefono.touched" class="error-message">
+                El teléfono debe tener 9 dígitos
+            </div>
         </div>
         <button type="submit" class="btn btn-primary" [disabled]="!pacienteForm.form.valid">Agregar</button>
     </form>
