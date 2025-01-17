@@ -5,6 +5,7 @@ import { msalGuard } from './guards/msal.guard';
 import { ConsultasadmComponent } from './components/consultasadm/consultasadm.component';
 import { PacientesadmComponent } from './components/pacientesadm/pacientesadm.component';
 import { PacienteslistComponent } from './components/pacientesadm/pacienteslist/pacienteslist.component';
+import { PacientesaddComponent } from './components/pacientesadm/pacientesadd/pacientesadd.component';
 
 
 export const routes: Routes = [
@@ -13,5 +14,6 @@ export const routes: Routes = [
     {path: 'consultasadm', component: ConsultasadmComponent, canActivate: [msalGuard]},
     {path: 'pacientesadm', component: PacientesadmComponent, canActivate: [msalGuard]},
     {path: 'pacienteslist', component:PacienteslistComponent, canActivate: [msalGuard]},
+    {path: 'pacientesadd', component:PacientesaddComponent, canActivate: [msalGuard]},
     {path: '**', redirectTo: ''},
 ];

@@ -9,7 +9,7 @@
                 <th>Acciones</th>
             </tr>
         </thead>
-        <tbody>
+        <body>
             <tr *ngFor="let paciente of pacientes">
                 <td>{{ paciente.id_paciente }}</td>
                 <td>{{ paciente.nombre_paciente }}</td>
@@ -18,11 +18,6 @@
                     <button (click)="verDetalle(paciente)">Ver Detalle</button>
                 </td>
             </tr>
-        </tbody>
+        </body>
     </table>
 </div>
-<!-- EC2, IDAAS, API GATEWAY
-mostrar endpoints postman sin token para mostrar error 401
-login para recuperar el token y usar postman con token para codigo 200
-luego ejecutar el front, intentando entrar a una url sin iniciar sesion
-luego iniciar sesion y mostrar funciones -->
