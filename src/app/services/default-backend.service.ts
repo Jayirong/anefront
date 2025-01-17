@@ -19,6 +19,11 @@ export class DefaultBackendService {
     return this.http.get<Paciente[]>(this.apiPacientesUrl, this.httpOptions);
   }
 
+  public getPacienteById(id: string): Observable<Paciente> {
+    const url = `${this.apiPacientesUrl}/${id}`;
+    return this.http.get<Paciente>(url);
+  }
+
   public addPaciente(paciente: Omit<Paciente, 'id_paciente' | 'reportes'>): Observable<any> {
     return this.http.post<any>(this.apiPacientesUrl, paciente);
   }

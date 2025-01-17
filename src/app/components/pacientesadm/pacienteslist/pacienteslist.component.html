@@ -4,20 +4,22 @@
         <thead>
             <tr>
                 <th>ID</th>
+                <th>RUT</th>
                 <th>Nombre</th>
-                <th>Apellido</th>
+                <th>Apellido</th>                
                 <th>Acciones</th>
             </tr>
         </thead>
-        <body>
+        <tbody>
             <tr *ngFor="let paciente of pacientes">
                 <td>{{ paciente.id_paciente }}</td>
+                <td>{{ paciente.rut_paciente }}</td>
                 <td>{{ paciente.nombre_paciente }}</td>
-                <td>{{ paciente.apellido_paciente }}</td>
+                <td>{{ paciente.apellido_paciente }}</td>                
                 <td>
                     <button (click)="verDetalle(paciente)">Ver Detalle</button>
                 </td>
             </tr>
-        </body>
+        </tbody>
     </table>
 </div>

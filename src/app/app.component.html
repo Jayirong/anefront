@@ -1,11 +1,13 @@
 <div class="navbar">
   <table>
     <tr>
-      <td><button (click)="iniciarSesion()" *ngIf="!usuarioEstaConectado()">Iniciar Sesión</button></td>
-      <td><button (click)="cerrarSesion()" *ngIf="usuarioEstaConectado()">Cerrar Sesión</button></td>
+      <td><button (click)="iniciarSesion()" *ngIf="!usuarioEstaConectado()" class="iniciar-sesion">Iniciar Sesión</button></td>
+      <td><button (click)="cerrarSesion()" *ngIf="usuarioEstaConectado()" class="cerrar-sesion">Cerrar Sesión</button></td>
+      <td><button (click)="irMenu()" *ngIf="usuarioEstaConectado()" class="menu">Menu</button></td>
     </tr>
   </table>
 </div>
+
 <div class="estado">
   <div *ngIf="usuarioEstaConectado()" class="estado-contenido">
     <button class="back-button" *ngIf="usuarioEstaConectado()" (click)="volverAtras()">⬅</button>
@@ -15,6 +17,7 @@
     <h3>Sesión NO iniciada</h3>
   </div>
 </div>
+
 <div class="contenido">
   <router-outlet></router-outlet>
 </div>

@@ -41,6 +41,10 @@ export class AppComponent {
     });
   }
 
+  irMenu(): void {
+    this.router.navigate(['/menu']);
+  }
+
   volverAtras(): void {
     this.location.back();
   }

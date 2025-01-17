@@ -1,0 +1,18 @@
+<div *ngIf="paciente" class="card">
+  <h2 class="card-title">Detalle del Paciente</h2>
+  <div class="card-body">
+    <div class="card-row">
+      <strong>Nombre:</strong> {{ paciente.nombre_paciente }}
+    </div>
+    <div class="card-row">
+      <strong>Apellido:</strong> {{ paciente.apellido_paciente }}
+    </div>
+    <div class="card-row">
+      <strong>RUT:</strong> {{ paciente.rut_paciente }}
+    </div>
+    <div class="card-row">
+      <strong>Telefono:</strong> {{ paciente.telefono_paciente }}
+    </div>
+    <button class="edit-button" (click)="editarPaciente()">Editar</button>
+  </div>
+</div>
