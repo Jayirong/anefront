@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { DefaultBackendService } from '../../../services/default-backend.service';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faEdit } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-pacientedetail',
@@ -13,6 +13,8 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
   styleUrl: './pacientedetail.component.scss'
 })
 export class PacientedetailComponent {
+  //icons
+  faEdit = faEdit;
 
   paciente: any = {};
 

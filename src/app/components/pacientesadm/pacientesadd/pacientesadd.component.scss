@@ -3,25 +3,30 @@
     margin: 0 auto;
     padding: 2rem;
     background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra más prominente */
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
 }
 
 h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    color: #333;
+    margin-bottom: 2rem;
+    color: #004494; /* Azul oscuro */
+    font-size: 1.8rem;
 }
 
 .form-group {
     margin-bottom: 1.5rem;
+    text-align: left; /* Alineamos los labels a la izquierda */
 }
 
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    font-weight: bold;
-    color: #555;
+    font-weight: 600; /* Hacemos la fuente un poco más fuerte */
+    color: #004494; /* Azul oscuro */
+    font-size: 1.1rem;
+    letter-spacing: 0.5px; /* Espaciado entre letras */
 }
 
 .form-control {
@@ -29,25 +34,32 @@ h2 {
     padding: 0.8rem;
     margin: 0.4rem 0;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 1rem;
+    transition: border-color 0.3s ease;
 }
 
 .form-control:focus {
-    border-color: #007bff;
+    border-color: #007bff; /* Azul brillante */
     outline: none;
 }
 
 button {
     display: block;
     width: 100%;
-    padding: 0.8rem;
+    padding: 1rem;
     font-size: 1.2rem;
     color: white;
-    background-color: #007bff;
+    background-color: #007bff; /* Azul brillante */
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Azul oscuro */
+    transform: scale(1.05);
 }
 
 button:disabled {

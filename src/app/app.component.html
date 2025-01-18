@@ -1,25 +1,24 @@
 <div class="navbar">
+  <button class="back-button" *ngIf="usuarioEstaConectado()" (click)="volverAtras()">
+    <fa-icon [icon]="faArrowLeft"></fa-icon>
+  </button>
+  
+  <div class="estado-sesion">
+    <span *ngIf="usuarioEstaConectado()">Sesión iniciada: {{usuarioNombre}}</span>
+    <span *ngIf="!usuarioEstaConectado()">Sesión NO iniciada</span>
+  </div>
+  
   <button (click)="iniciarSesion()" *ngIf="!usuarioEstaConectado()" class="iniciar-sesion">
     <fa-icon [icon]="faSignInAlt"></fa-icon> Iniciar Sesión
   </button>
+  
   <button (click)="cerrarSesion()" *ngIf="usuarioEstaConectado()" class="cerrar-sesion">
     <fa-icon [icon]="faSignOutAlt"></fa-icon> Cerrar Sesión
   </button>
+  
   <button (click)="irMenu()" *ngIf="usuarioEstaConectado()" class="menu">
     <fa-icon [icon]="faBars"></fa-icon> Menú
   </button>
-</div>
-
-<div class="estado">
-  <div *ngIf="usuarioEstaConectado()" class="estado-contenido">
-    <button class="back-button" *ngIf="usuarioEstaConectado()" (click)="volverAtras()">
-      <fa-icon [icon]="faArrowLeft"></fa-icon>
-    </button>
-    <h3>Sesión iniciada correctamente</h3>
-  </div>
-  <div *ngIf="!usuarioEstaConectado()">
-    <h3>Sesión NO iniciada</h3>
-  </div>
 </div>
 
 <div class="contenido">

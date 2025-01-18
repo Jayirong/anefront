@@ -1,28 +1,28 @@
 .card {
-    max-width: 600px;
-    margin: 30px auto;
-    padding: 25px;
-    background: linear-gradient(135deg, #ffffff, #f8f9fa);
-    border: 1px solid #ddd;
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #ccc;
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    text-align: left;
     font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f8f9fa, #ffffff); /* Fondo suave */
 }
 
 .card-title {
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 2.2rem;
+    font-weight: 600;
     color: #004494;
     margin-bottom: 20px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
+    text-align: center;
 }
 
 .card-body {
-    background: #f0f0f0;
     padding: 20px;
-    border-radius: 8px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -32,13 +32,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px;
     background: #ffffff;
-    padding: 12px;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
     font-weight: 500;
-    color: #333;
+    color: #555;
 }
 
 .card-row strong {
@@ -47,8 +48,8 @@
 
 .edit-button {
     padding: 14px 28px;
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1.1rem;
+    font-weight: 600;
     background: linear-gradient(135deg, #007bff, #0056b3);
     color: white;
     border: none;
@@ -56,9 +57,21 @@
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s;
     margin-top: 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Para espacio entre ícono y texto */
+}
+
+.edit-button fa-icon {
+    font-size: 1.4rem; /* Ajustar el tamaño del ícono */
 }
 
 .edit-button:hover {
     background: linear-gradient(135deg, #0056b3, #004494);
     transform: scale(1.05);
 }
+

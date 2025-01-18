@@ -1,103 +1,96 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    background-color: #007bff;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    font-family: 'Poppins', sans-serif; /* Cambié la fuente a Poppins */
-  }
-  
-  .navbar button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-left: 10px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 10px;  /* Agregamos un espacio entre el icono y el texto */
-  }
-  
-  .navbar .iniciar-sesion {
-    background-color: #28a745;
-    color: white;
-  }
-  
-  .navbar .cerrar-sesion {
-    background-color: #dc3545;
-    color: white;
-  }
-  
-  .navbar .menu {
-    background-color: #539dec;
-    color: white;
-  }
-  
-  .navbar button:hover {
-    opacity: 0.9;
-    transform: scale(1.05);
-    background-color: rgba(0, 0, 0, 0.1); /* Sombra ligera */
-  }
-  
-  .navbar .fa-icon {
-    font-size: 1.2rem; /* Ajustamos el tamaño si es necesario */
-  }
-  
-  .estado {
-    padding: 15px;
-    height: 66%;
-    max-height: 250px;
-    border: 1px solid #ddd;
-    margin: 20px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    position: relative;
-  }
-  
-  .estado-contenido {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    font-size: 1.1rem;
-    color: #333;
-    height: 100%;
-  }
-  
-  .estado-contenido h3 {
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #007bff;
-  }
-  
-  .back-button {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    font-size: 1.8rem; /* Ajustamos el tamaño si es necesario */
-    padding: 10px 15px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .back-button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  }
-  
-  .back-button fa-icon {
-    font-size: 1.6rem; /* Ajustar el tamaño del ícono si es necesario */
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #007bff;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+.navbar button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar .iniciar-sesion {
+  background-color: #28a745;
+  color: white;
+}
+
+.navbar .cerrar-sesion {
+  background-color: #dc3545;
+  color: white;
+}
+
+.navbar .menu {
+  background-color: #539dec;
+  color: white;
+}
+
+.navbar button:hover {
+  background-color: rgba(0, 0, 0, 0.1);  /* Solo cambio de color */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Añadir sombra sutil */
+}
+
+.navbar .fa-icon {
+  font-size: 1.2rem;
+}
+
+.estado-sesion {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: center;
+  flex-grow: 1;
+  margin-left: 15px;
+  letter-spacing: 0.5px;
+}
+
+.estado-sesion span {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #f8f9fa;
+  margin-top: 2px;
+}
+
+/* Resaltar el nombre del usuario */
+.estado-sesion span.usuario {
+  color: #ffd700; /* Dorado para resaltar */
+  font-weight: 600;
+}
+
+.back-button {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+  background-color: #0056b3;  /* Cambio de color */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+.back-button fa-icon {
+  font-size: 1.6rem;
+}

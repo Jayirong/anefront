@@ -16,6 +16,8 @@
     <div class="card-row">
       <strong>Telefono:</strong> {{ paciente.telefono_paciente }}
     </div>
-    <button class="edit-button" (click)="editarPaciente()">Editar</button>
+    <button class="edit-button" (click)="editarPaciente()">
+      <fa-icon [icon]="faEdit"></fa-icon> Editar
+    </button>
   </div>
 </div>

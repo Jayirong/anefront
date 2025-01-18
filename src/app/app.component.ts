@@ -20,10 +20,19 @@ export class AppComponent {
   faBars = faBars;
   faArrowLeft = faArrowLeft;
   
-
+  //variables de usuario
+  usuarioNombre: string | undefined;
   title = 'anefront';
 
-  constructor(private msalService: MsalService, private router: Router, private location: Location) {}
+  constructor(
+    private msalService: MsalService,
+    private router: Router,
+    private location: Location
+  ) {}
+
+  ngOnInit(): void {
+    this.obtenerUsuario();
+  }
 
   usuarioEstaConectado(): boolean {
     return this.msalService.instance.getActiveAccount() != null;
@@ -56,6 +65,15 @@ export class AppComponent {
 
   volverAtras(): void {
     this.location.back();
+  }
+
+  obtenerUsuario(): void {
+    const account = this.msalService.instance.getActiveAccount();
+    if (account) {
+      this.usuarioNombre = account.name;
+    } else {
+      this.usuarioNombre = undefined;
+    }
   }
 
 }
