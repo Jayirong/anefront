@@ -1,8 +1,14 @@
 <div class="pacientes-container">
     <h1 class="titulo">Gestor de Pacientes</h1>
     <div class="botones-grid">
-        <button class="boton-placeholder" routerLink="/pacientesadd">Ingresar Paciente</button>
-        <button class="boton-placeholder">Botón 2</button>
-        <button class="boton-placeholder" routerLink="/pacienteslist">Ver Pacientes</button>
+        <button class="boton-placeholder" routerLink="/pacientesadd">
+            <fa-icon [icon]="faPlusCircle"></fa-icon> Ingresar Paciente
+        </button>
+        <button class="boton-placeholder">
+            <fa-icon [icon]="faUserSlash"></fa-icon> Eliminar usuarios
+        </button>
+        <button class="boton-placeholder" routerLink="/pacienteslist">
+            <fa-icon [icon]="faListAlt"></fa-icon> Ver Pacientes
+        </button>
     </div>
 </div>

@@ -1,5 +1,4 @@
-<div class="pacientes-list-container">
-    <h2>Listado de Pacientes</h2>
+<div *ngIf="pacientes.length > 0; else noData">
     <table class="pacientes-table">
         <thead>
             <tr>
@@ -17,9 +16,14 @@
                 <td>{{ paciente.nombre_paciente }}</td>
                 <td>{{ paciente.apellido_paciente }}</td>                
                 <td>
-                    <button (click)="verDetalle(paciente)">Ver Detalle</button>
+                    <button (click)="verDetalle(paciente)">
+                      <fa-icon [icon]="eyeIcon" class="icon"></fa-icon> Ver Detalle
+                    </button>
                 </td>
             </tr>
         </tbody>
     </table>
 </div>
+<ng-template #noData>
+    <p>No se han encontrado pacientes. Espere un momento...</p>
+</ng-template>

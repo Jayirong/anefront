@@ -1,32 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Merriweather:wght@300;700&display=swap');
+
 .pagina-publica-container {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    margin-top: 50px;
-    padding: 20px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    background-color: #f9f9f9;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin: 20px auto;
+    padding: 10px;
 }
 
 .pagina-publica-container h1 {
-    font-size: 3rem;  /* Tamaño de fuente grande */
-    font-weight: bold;  /* Negrita */
-    color: #333;
-    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pagina-publica-container .anemona {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #004494;
 }
 
 .pagina-publica-container span {
-    display: block;  /* Asegura que cada palabra esté en una línea separada */
-    font-size: 2.5rem;  /* Tamaño de fuente ligeramente más pequeño si lo prefieres */
+    display: block;
+    font-size: 2rem;
 }
 
 .imagen-container {
-    text-align: center; /* Centra el contenido horizontalmente */
-    margin-top: 20px;  /* Espacio entre el texto y la imagen */
+    text-align: center;
+    margin-top: 10px;
 }
 
-.imagen-container img {
-    max-width: 100%; /* La imagen no excederá el ancho del contenedor */
-    height: auto;    /* Mantiene la proporción de la imagen */
-    display: inline-block; /* Centra la imagen cuando está dentro del texto */
+.imagen-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+}
+
+.imagen-container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 153, 255, 0.2) 10%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(15px);
 }

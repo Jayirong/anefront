@@ -2,10 +2,13 @@
     <h1>ANÉMONA</h1>
     <div class="usuario-conectado">
         <span>Usuario conectado: {{obtenerUsuario()}}</span>
-    </div> 
+    </div>
     <div class="container">
-        <button class="big-button" routerLink="/pacientesadm">Gestor de pacientes</button>
-        <button class="big-button" routerLink="/consultasadm">Gestor de consultas</button>
+        <button class="big-button" routerLink="/pacientesadm">
+            <fa-icon [icon]="faUser"></fa-icon> Gestor de pacientes
+        </button>
+        <button class="big-button" routerLink="/visualizador">
+            <fa-icon [icon]="faHeartbeat"></fa-icon> Visualizador de alertas y estados vitales
+        </button>
     </div>
 </div>
-

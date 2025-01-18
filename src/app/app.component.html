@@ -1,16 +1,20 @@
 <div class="navbar">
-  <table>
-    <tr>
-      <td><button (click)="iniciarSesion()" *ngIf="!usuarioEstaConectado()" class="iniciar-sesion">Iniciar Sesión</button></td>
-      <td><button (click)="cerrarSesion()" *ngIf="usuarioEstaConectado()" class="cerrar-sesion">Cerrar Sesión</button></td>
-      <td><button (click)="irMenu()" *ngIf="usuarioEstaConectado()" class="menu">Menu</button></td>
-    </tr>
-  </table>
+  <button (click)="iniciarSesion()" *ngIf="!usuarioEstaConectado()" class="iniciar-sesion">
+    <fa-icon [icon]="faSignInAlt"></fa-icon> Iniciar Sesión
+  </button>
+  <button (click)="cerrarSesion()" *ngIf="usuarioEstaConectado()" class="cerrar-sesion">
+    <fa-icon [icon]="faSignOutAlt"></fa-icon> Cerrar Sesión
+  </button>
+  <button (click)="irMenu()" *ngIf="usuarioEstaConectado()" class="menu">
+    <fa-icon [icon]="faBars"></fa-icon> Menú
+  </button>
 </div>
 
 <div class="estado">
   <div *ngIf="usuarioEstaConectado()" class="estado-contenido">
-    <button class="back-button" *ngIf="usuarioEstaConectado()" (click)="volverAtras()">⬅</button>
+    <button class="back-button" *ngIf="usuarioEstaConectado()" (click)="volverAtras()">
+      <fa-icon [icon]="faArrowLeft"></fa-icon>
+    </button>
     <h3>Sesión iniciada correctamente</h3>
   </div>
   <div *ngIf="!usuarioEstaConectado()">

@@ -1,72 +1,72 @@
 .pagina-privada-container {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 20px;
-    padding: 20px;
+    padding: 40px;
+    background-color: #f9f9f9;
     border: 2px solid #ccc;
     border-radius: 10px;
-    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    color: #333;
+    color: #004494;
     text-align: center;
+    font-size: 3rem;  /* Aumento de tamaño */
+    font-weight: bold;
+    margin-bottom: 30px;
 }
 
 .usuario-conectado span {
     display: block;
     font-size: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
     background-color: #fff;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;  
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-.response-backend {
-    margin-top: 20px;
-    font-size: 14px;
-    color: #444;
-}
-
-.response-backend pre {
-    padding: 10px;
     border: 1px solid #ddd;
-    background-color: #f3f3f3;
     border-radius: 5px;
+    color: #333;
+    text-align: center;
 }
 
 .container {
-    text-align: center;
-    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;  /* Más espacio entre los botones */
+    margin-top: 40px;
+    flex-wrap: wrap;
 }
 
 .big-button {
-    display: inline-block;
-    padding: 20px 40px;
-    font-size: 1.5em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 90px;  /* Aumento de ancho */
+    font-size: 2.5rem;  /* Aumento de tamaño de la fuente */
     margin: 20px;
-    cursor: pointer;
-    border: none;
-    border-radius: 10px;
+    border-radius: 15px;
     background-color: #007bff;
     color: white;
-    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+    width: 450px;  /* Aumento más considerable del ancho */
+    height: 180px;  /* Reducción adicional de la altura */
+    box-sizing: border-box;
 }
 
 .big-button:hover {
     background-color: #0056b3;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+}
+
+.big-button i {
+    margin-right: 25px;  /* Más espacio entre el icono y el texto */
+    font-size: 4rem;  /* Aumento de tamaño del icono (el doble) */
+}
+
+fa-icon {
+    margin-right: 25px;
+    font-size: 4rem;  /* Aumento de tamaño del icono (el doble) */
 }

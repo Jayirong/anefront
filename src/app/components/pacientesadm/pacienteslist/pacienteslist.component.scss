@@ -1,6 +1,15 @@
 .pacientes-list-container {
     margin: 20px;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
+    width: 100%; /* Asegura que ocupe el 100% del espacio disponible */
+    overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
+}
+
+.table-wrapper {
+    max-width: 90%;  /* Limita el ancho máximo de la tabla, puedes ajustar este valor */
+    margin: 0 auto;  /* Centra la tabla en la pantalla */
+    overflow-x: auto;  /* Permite el desplazamiento horizontal en dispositivos pequeños */
 }
 
 .pacientes-table {
@@ -8,17 +17,62 @@
     border-collapse: collapse;
     margin: 20px auto;
     text-align: left;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    table-layout: auto;  /* Ajusta las columnas automáticamente según el contenido */
 }
 
 .pacientes-table th,
 .pacientes-table td {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    word-wrap: break-word; /* Permite que el texto se divida si es largo */
+    overflow: hidden; /* Oculta cualquier desbordamiento en las celdas */
 }
 
-.paciente-table th {
-    background-color: #f2f2f2;
+.pacientes-table th {
+    background-color: #f8f9fa;
     font-weight: bold;
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pacientes-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Ajustar el ancho de las columnas específicas */
+.pacientes-table td:nth-child(1),
+.pacientes-table th:nth-child(1) {
+    width: 80px;  /* Limita el ancho de la columna 'ID' */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.pacientes-table td:nth-child(2),
+.pacientes-table th:nth-child(2) {
+    width: 120px; /* Ajusta el ancho de la columna 'RUT' */
+}
+
+.pacientes-table td:nth-child(3),
+.pacientes-table th:nth-child(3) {
+    width: 200px; /* Ajusta el ancho de la columna 'Nombre' */
+}
+
+.pacientes-table td:nth-child(4),
+.pacientes-table th:nth-child(4) {
+    width: 200px; /* Ajusta el ancho de la columna 'Apellido' */
+}
+
+.pacientes-table td:nth-child(5),
+.pacientes-table th:nth-child(5) {
+    width: 150px; /* Ajusta el ancho de la columna 'Acciones' */
 }
 
 button {
@@ -28,9 +82,23 @@ button {
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
 }
 
 button:hover {
     background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.icon-title, .icon {
+    font-size: 1.2rem;
+    margin-right: 8px;  /* Espacio entre el icono y el texto */
+}
+
+.icon {
+    font-size: 1.5rem;  /* Aumento del tamaño del icono */
 }

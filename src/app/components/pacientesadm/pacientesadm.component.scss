@@ -3,36 +3,82 @@
     flex-direction: column;
     text-align: center;
     margin: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .titulo {
     font-size: 2.5rem;
+    color: #004494;
     margin-bottom: 30px;
 }
 
 .botones-grid {
     display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+    gap: 20px; /* Espacio entre los botones */
     justify-content: center;
+    margin-top: 20px; /* Espacio arriba de los botones */
 }
 
 .boton-placeholder {
-    width: 350px;
+    width: 100%;  /* Los botones ocuparán el 100% del ancho disponible en su contenedor */
     height: 150px;
     font-size: 1.2rem;
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    min-width: 250px; /* Garantiza que los botones no se hagan demasiado pequeños */
 }
 
 .boton-placeholder:hover {
     background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.boton-placeholder fa-icon {
+    font-size: 2rem;  /* Tamaño del icono */
+    margin-right: 15px;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 900px) {
+    .botones-grid {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas pequeñas */
+    }
+
+    .boton-placeholder {
+        width: 100%; /* Los botones ocupan todo el ancho disponible */
+        height: 120px; /* Reduce la altura para ajustarlo mejor */
+        font-size: 1rem; /* Ajuste de tamaño de fuente */
+    }
+
+    .boton-placeholder fa-icon {
+        font-size: 1.5rem;  /* Reduce el tamaño de los iconos en pantallas pequeñas */
+    }
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 600px) {
+    .botones-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas más pequeñas */
+    }
+
+    .boton-placeholder {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        height: 100px; /* Ajusta la altura aún más */
+        font-size: 0.9rem; /* Ajuste de fuente para pantallas muy pequeñas */
+    }
+
+    .boton-placeholder fa-icon {
+        font-size: 1.3rem;  /* Ajuste de tamaño de iconos para pantallas muy pequeñas */
+    }
 }

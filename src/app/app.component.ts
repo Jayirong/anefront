@@ -3,15 +3,24 @@ import { Component } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { MsalService } from '@azure/msal-angular'
 import { AuthenticationResult } from '@azure/msal-browser'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faSignInAlt, faSignOutAlt, faBars, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule],
+  imports: [RouterOutlet, CommonModule, FontAwesomeModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  //icons
+  faSignInAlt = faSignInAlt;
+  faSignOutAlt = faSignOutAlt;
+  faBars = faBars;
+  faArrowLeft = faArrowLeft;
+  
+
   title = 'anefront';
 
   constructor(private msalService: MsalService, private router: Router, private location: Location) {}

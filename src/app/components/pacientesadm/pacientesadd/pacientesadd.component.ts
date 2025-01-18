@@ -17,6 +17,7 @@ export class PacientesaddComponent {
     nombre_paciente: '',
     apellido_paciente: '',
     rut_paciente: '',
+    edad_paciente: null,
     telefono_paciente: ''
   };
 
@@ -30,7 +31,7 @@ export class PacientesaddComponent {
       },
       error: (err) => {
         console.error('Error al agregar al paciente: ', err);
-        alert('Shit happens, no me la pude');
+        alert('Shit happens, no me la pude, intenta relogeando');
       }
     });
   }

@@ -49,6 +49,23 @@
                 El RUT debe ser válido (Ej: 20.523.367-9)
             </div>
         </div>
+
+        <div class="form-group">
+            <label for="edad">Edad</label>
+            <input 
+                type="text"
+                id="edad"
+                class="form-control"
+                [(ngModel)]="paciente.edad_paciente"
+                name="edad_paciente"
+                required
+                #edad="ngModel"
+                pattern="^\d*$"
+            />
+            <div *ngIf="edad.invalid && edad.touched" class="error-message">
+                La edad debe ser un número válido y mayor a 0
+            </div>
+        </div>
     
         <div class="form-group">
             <label for="telefono">Teléfono</label>
