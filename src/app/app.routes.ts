@@ -6,6 +6,7 @@ import { PacientesadmComponent } from './components/pacientesadm/pacientesadm.co
 import { PacienteslistComponent } from './components/pacientesadm/pacienteslist/pacienteslist.component';
 import { PacientesaddComponent } from './components/pacientesadm/pacientesadd/pacientesadd.component';
 import { PacientedetailComponent } from './components/pacientesadm/pacientedetail/pacientedetail.component';
+import { PacientesdeleteComponent } from './components/pacientesadm/pacientesdelete/pacientesdelete.component';
 
 
 export const routes: Routes = [
@@ -15,5 +16,6 @@ export const routes: Routes = [
     {path: 'pacienteslist', component:PacienteslistComponent, canActivate: [msalGuard]},
     {path: 'pacientesadd', component:PacientesaddComponent, canActivate: [msalGuard]},
     {path: 'pacientes/:id', component:PacientedetailComponent, canActivate: [msalGuard]},
+    {path: 'pacientesdelete', component:PacientesdeleteComponent, canActivate: [msalGuard]},
     {path: '**', redirectTo: ''},
 ];

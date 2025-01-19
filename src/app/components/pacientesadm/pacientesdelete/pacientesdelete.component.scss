@@ -1,0 +1,138 @@
+.delete-card {
+    max-width: 600px; /* Limita el ancho máximo de la tarjeta */
+    margin: 30px auto; /* Centra la tarjeta horizontalmente */
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Poppins', sans-serif; /* Aseguramos que la fuente esté aplicada */
+}
+
+.titulo {
+    font-size: 2.5rem;
+    color: #004494;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.eliminar-todos {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    margin-bottom: 20px;
+    width: 100%; /* Hace que el botón ocupe todo el ancho disponible */
+    padding: 14px 28px; /* Aumenta el tamaño del botón */
+    font-size: 1.5rem; /* Fuente más grande */
+    font-weight: bold;
+    text-align: center;
+}
+
+.eliminar-todos:hover {
+    background: linear-gradient(135deg, #c82333, #9e1b32);
+}
+
+.pacientes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.paciente-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.paciente-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.eliminar-individual {
+    background-color: #dc3545;
+    font-size: 1rem;
+    padding: 8px 16px; /* Ajusta el tamaño del botón */
+    margin-left: 20px; /* Alinea el botón a la derecha del nombre */
+}
+
+.eliminar-individual:hover {
+    background-color: #c82333;
+}
+
+.boton-placeholder {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    justify-content: center;
+}
+
+.boton-placeholder:hover {
+    transform: scale(1.05);
+}
+
+.boton-placeholder fa-icon {
+    font-size: 1.5rem;
+}
+
+.paciente-info {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .delete-card {
+        padding: 15px; /* Reduce el padding en pantallas pequeñas */
+    }
+
+    .eliminar-todos {
+        width: 100%; /* Asegura que el botón ocupe todo el ancho */
+        font-size: 1.4rem; /* Ajusta el tamaño de la fuente en pantallas pequeñas */
+        padding: 12px 24px; /* Ajusta el tamaño de los botones */
+    }
+
+    .paciente-item {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .eliminar-individual {
+        font-size: 1.1rem; /* Ajusta el tamaño del botón eliminar */
+    }
+
+    .paciente-info {
+        font-size: 1.2rem; /* Ajusta el tamaño de la información del paciente */
+    }
+}
+
+@media (max-width: 600px) {
+    .delete-card {
+        padding: 10px; /* Ajusta el padding para pantallas aún más pequeñas */
+    }
+
+    .eliminar-todos {
+        font-size: 1.2rem; /* Ajusta el tamaño de la fuente */
+        padding: 10px 20px;
+    }
+
+    .paciente-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .eliminar-individual {
+        width: 100%;
+    }
+}

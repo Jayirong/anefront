@@ -1,1 +1,16 @@
-<p>pacientesdelete works!</p>
+<div class="delete-card">
+  <h1 class="titulo">Eliminar Pacientes</h1>
+
+  <button class="boton-placeholder eliminar-todos" (click)="deleteAllPacientes()">
+      <fa-icon [icon]="faTrashAlt"></fa-icon> Eliminar Todos
+  </button>
+
+  <div class="pacientes-list">
+      <div *ngFor="let paciente of pacientes" class="paciente-item">
+          <span class="paciente-info">{{ paciente.id_paciente }} | {{ paciente.nombre_paciente }} {{ paciente.apellido_paciente }}</span>
+          <button class="boton-placeholder eliminar-individual" (click)="deletePaciente(paciente.id_paciente)">
+              <fa-icon [icon]="faTrash"></fa-icon> Eliminar
+          </button>
+      </div>
+  </div>
+</div>
