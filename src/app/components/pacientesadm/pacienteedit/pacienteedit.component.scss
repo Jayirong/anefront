@@ -1,0 +1,85 @@
+.paciente-edit-container {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f8f9fa, #ffffff); /* Fondo suave */
+}
+
+.titulo {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #004494;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label {
+  font-size: 1.1rem;
+  color: #004494; /* Resaltamos el color del texto */
+  font-weight: bold; /* Hacemos el texto más destacado */
+  margin-bottom: 5px; /* Un pequeño espacio debajo del label */
+}
+
+input {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.boton-placeholder {
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.boton-placeholder fa-icon {
+  font-size: 1.4rem; /* Ajustar el tamaño del ícono */
+}
+
+.boton-placeholder:hover {
+  background: linear-gradient(135deg, #0056b3, #004494);
+  transform: scale(1.05);
+}
+
+.boton-placeholder:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}

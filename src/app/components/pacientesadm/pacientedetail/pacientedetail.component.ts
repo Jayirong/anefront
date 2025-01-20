@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DefaultBackendService } from '../../../services/default-backend.service';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -18,7 +18,7 @@ export class PacientedetailComponent {
 
   paciente: any = {};
 
-  constructor(private route: ActivatedRoute, private backendService: DefaultBackendService) {}
+  constructor(private route: ActivatedRoute, private backendService: DefaultBackendService, private router: Router) {}
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
@@ -39,7 +39,7 @@ export class PacientedetailComponent {
   }
 
   editarPaciente(): void {
-    console.log('Editar paciente', this.paciente);
+    this.router.navigate([`/pacientes/${this.paciente.id_paciente}/edit`]);
   }
 
 }

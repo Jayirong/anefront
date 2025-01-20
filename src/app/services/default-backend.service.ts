@@ -31,7 +31,7 @@ export class DefaultBackendService {
     return this.http.get<Paciente>(url);
   }
 
-  public addPaciente(paciente: Omit<Paciente, 'id_paciente' | 'reportes'>): Observable<any> {
+  public addPaciente(paciente: Omit<Paciente, 'id_paciente' | 'alertas' | 'estadosVitales'>): Observable<any> {
     return this.http.post<any>(this.apiPacientesUrl, paciente);
   }
 
@@ -41,6 +41,10 @@ export class DefaultBackendService {
 
   public deleteAllPacientes(): Observable<string> {
     return this.http.delete(this.apiPacientesUrl, { responseType: 'text' });
+  }
+
+  public updatePaciente(updatedpaciente: Paciente): Observable<any> {
+    return this.http.put(`${this.apiPacientesUrl}/${updatedpaciente.id_paciente}`, updatedpaciente);
   }
 
   public actualizarPacientes(): void {

@@ -5,5 +5,6 @@ export interface Paciente {
     rut_paciente: string;
     edad_paciente: number | null;
     telefono_paciente: string;
-    reportes: any[];
+    alertas: any[];
+    estadosVitales: any[];
 }

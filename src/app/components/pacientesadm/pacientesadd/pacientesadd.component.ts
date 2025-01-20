@@ -13,7 +13,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './pacientesadd.component.scss'
 })
 export class PacientesaddComponent {
-  paciente: Omit<Paciente, 'id_paciente' | 'reportes'> = {
+  paciente: Omit<Paciente, 'id_paciente' | 'alertas' | 'estadosVitales'> = {
     nombre_paciente: '',
     apellido_paciente: '',
     rut_paciente: '',
