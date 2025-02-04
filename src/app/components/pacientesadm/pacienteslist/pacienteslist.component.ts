@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { DefaultBackendService } from '../../../services/default-backend.service';
 import { Router } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faEye } from '@fortawesome/free-solid-svg-icons'
+import { faEye, faHeartbeat } from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'app-pacienteslist',
@@ -15,6 +15,7 @@ import { faEye } from '@fortawesome/free-solid-svg-icons'
 export class PacienteslistComponent implements OnInit{
   //icons
   eyeIcon = faEye;
+  heartbeatIcon = faHeartbeat;
 
   pacientes: any[] = [];
 
@@ -38,6 +39,10 @@ export class PacienteslistComponent implements OnInit{
 
   verDetalle(paciente: any): void{
     this.router.navigate([`/pacientes/${paciente.id_paciente}`]);
+  }
+
+  verEstadosVitales(paciente: any): void{
+    this.router.navigate([`/pacientes/${paciente.id_paciente}/estadosvitales`])
   }
 
 }

@@ -8,6 +8,8 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class DefaultBackendService {
   private apiPacientesUrl= 'https://8r48b6gujh.execute-api.us-east-1.amazonaws.com/pacientes'
+  private apiAlertasUrl= 'https://8r48b6gujh.execute-api.us-east-1.amazonaws.com/alertas'
+  private apiEstadosUrl= 'https://8r48b6gujh.execute-api.us-east-1.amazonaws.com/estadovital'
   private pacientesSubject: BehaviorSubject<Paciente[]> = new BehaviorSubject<Paciente[]>([]);
 
   constructor(private http: HttpClient) { }
@@ -54,7 +56,15 @@ export class DefaultBackendService {
   }
 
   //Alertas
+  
 
   //SignosVitales
+  public getEstadosVitalesByPaciente(id_paciente: string): Observable<any[]> {
+    return this.http.get<any[]>(this.apiEstadosUrl);
+  }
+
+  public postEstadoVital(idPaciente: number, estadoVital: any) {
+    return this.http.post(`${this.apiEstadosUrl}/paciente/${idPaciente}`, estadoVital);
+  }
 
 }

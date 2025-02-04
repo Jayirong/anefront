@@ -1,0 +1,97 @@
+.estadosvitales-container {
+    margin: 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.titulo {
+    font-family: 'Poppins', sans-serif;
+}
+
+.table-wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+.estados-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    text-align: left;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    table-layout: auto;
+}
+
+.estados-table th,
+.estados-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.estados-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.estados-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.estados-table td:nth-child(1),
+.estados-table th:nth-child(1) {
+    width: 150px;
+}
+
+.estados-table td:nth-child(2),
+.estados-table th:nth-child(2),
+.estados-table td:nth-child(3),
+.estados-table th:nth-child(3) {
+    width: 130px;
+}
+
+.estados-table td:nth-child(4),
+.estados-table th:nth-child(4) {
+    width: 180px;
+}
+
+.estados-table td:nth-child(5),
+.estados-table th:nth-child(5) {
+    width: 140px;
+}
+
+.estados-table td:nth-child(6),
+.estados-table th:nth-child(6) {
+    width: 120px;
+}
+
+h2 {
+    color: #004494;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Estilo para resaltar valores críticos */
+.critico {
+    color: red;
+    font-weight: bold;
+}
+
+/* Ajustes para los iconos */
+.icon {
+    font-size: 1.5rem;
+    margin-right: 8px;
+}

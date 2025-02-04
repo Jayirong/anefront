@@ -1,0 +1,36 @@
+<div class="estadosvitales-container">
+    <h2><fa-icon [icon]="heartbeatIcon" class="icon"></fa-icon>Historial de Estados Vitales del Paciente {{ idPaciente }}</h2>
+    
+    <div class="table-wrapper">
+        <table class="estados-table">
+            <thead>
+                <tr>
+                    <th><fa-icon [icon]="heartbeatIcon"></fa-icon> Frecuencia Cardíaca</th>
+                    <th><fa-icon [icon]="tintIcon"></fa-icon> Presión Sistólica</th>
+                    <th><fa-icon [icon]="tintIcon"></fa-icon> Presión Diastólica</th>
+                    <th><fa-icon [icon]="lungsIcon"></fa-icon> Saturación Oxígeno</th>
+                    <th><fa-icon [icon]="calendarIcon"></fa-icon> Fecha</th>
+                    <th><fa-icon [icon]="clockIcon"></fa-icon> Hora</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let estado of estadosVitales">
+                    <td [ngClass]="{ 'critico': estado.frecuencia_cardiaca < 50 || estado.frecuencia_cardiaca > 100 }">
+                        {{ estado.frecuencia_cardiaca }}
+                    </td>
+                    <td [ngClass]="{ 'critico': estado.presion_arterial_sis < 90 || estado.presion_arterial_sis > 140 }">
+                        {{ estado.presion_arterial_sis }}
+                    </td>
+                    <td [ngClass]="{ 'critico': estado.presion_arterial_dias < 60 || estado.presion_arterial_dias > 90 }">
+                        {{ estado.presion_arterial_dias }}
+                    </td>
+                    <td [ngClass]="{ 'critico': estado.saturacion_oxigeno < 0.9 }">
+                        {{ estado.saturacion_oxigeno * 100 }}%
+                    </td>
+                    <td>{{ estado.fecha_registro_ev }}</td>
+                    <td>{{ estado.hora_registro_ev }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

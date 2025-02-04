@@ -1,0 +1,20 @@
+<div class="estados-container">
+    <h2 class="titulo">Gestión de Estados Vitales y Alertas</h2>
+
+    <div class="botones-grid">
+        <button class="boton-placeholder" routerLink="/pacienteslist">
+            <fa-icon [icon]="faHeartbeat"></fa-icon>
+            Ver Estados Vitales
+        </button>
+
+        <button class="boton-placeholder" (click)="verAlertas()">
+            <fa-icon [icon]="faExclamationTriangle"></fa-icon>
+            Ver Alertas
+        </button>
+
+        <button class="boton-placeholder boton-morado" (click)="generarEstadosVitalesAleatorios()">
+            <fa-icon [icon]="faRandom"></fa-icon>
+            Generar Estados vitales aleatorios
+        </button>
+    </div>
+</div>
